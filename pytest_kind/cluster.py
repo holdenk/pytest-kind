@@ -33,9 +33,9 @@ class KindCluster:
         path = Path(".pytest-kind")
         self.path = path / name
         self.path.mkdir(parents=True, exist_ok=True)
-        self.kubeconfig_path = kubeconfig or (self.path / f"kubeconfig")
+        self.kubeconfig_path = kubeconfig or (self.path / "kubeconfig")
         self.kind_path = kind_path or (self.path / f"kind{KIND_VERSION}")
-        self.kubectl_path = kubectl_path or (self.path / "kubectl{KUBECTL_VERSION}")
+        self.kubectl_path = kubectl_path or (self.path / f"kubectl{KUBECTL_VERSION}")
 
     def ensure_kind(self):
         if not self.kind_path.exists():
