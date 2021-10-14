@@ -7,7 +7,7 @@ def test_kind_cluster(testdir):
     import socket
 
     def test_cluster_api(kind_cluster):
-        assert kind_cluster.api.version == ('1', '20')
+        assert kind_cluster.api.version == ('1', '21')
 
     def test_kubectl_version(kind_cluster):
         assert "v1.20" in kind_cluster.kubectl("version")
